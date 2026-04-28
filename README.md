@@ -84,7 +84,7 @@ PATCH api/approval/:id/reject
 ### 🌐 Public
 
 ```http
-GET api/public/live/:teacherId
+GET api/public/live/teacher/:teacherId
 
 ```
 
