@@ -32,11 +32,11 @@ exports.uploadContent = async (req, res) => {
         const endTime = new Date(req.body.endTime);
         const fileType = file.ContentType.split("/").pop();
 
-        if (fileType != "jpg" && fileType != "png" && fileType != "pdf") {
+        if (fileType != "jpg" && fileType != "png" && fileType != "gif") {
             throw { message: "only jpg, png and gif file type allowed" }
         }
 
-        if (file.ContentLength > 15 * 1024 * 1024) {
+        if (file.ContentLength > 10 * 1024 * 1024) {
             return res.status(400).json({ error: "file size must be less than 10 mb" });
         }
 
