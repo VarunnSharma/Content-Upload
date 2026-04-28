@@ -32,8 +32,8 @@ exports.uploadContent = async (req, res) => {
         const endTime = new Date(req.body.endTime);
         const fileType = file.ContentType.split("/").pop();
 
-        if (fileType != "jpg" && fileType != "png" && fileType != "gif") {
-            throw { message: "only jpg, png and gif file type allowed" }
+        if (fileType != "jpg" && fileType != "png" && fileType != "gif" && fileType != "jpeg") {
+            throw { message: "only jpg, png, gif and jpeg file type allowed" }
         }
 
         if (file.ContentLength > 15 * 1024 * 1024) {
