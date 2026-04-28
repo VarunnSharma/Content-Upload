@@ -36,7 +36,7 @@ exports.uploadContent = async (req, res) => {
             throw { message: "only jpg, png and gif file type allowed" }
         }
 
-        if (file.ContentLength > 10 * 1024 * 1024) {
+        if (file.ContentLength > 15 * 1024 * 1024) {
             return res.status(400).json({ error: "file size must be less than 10 mb" });
         }
 
